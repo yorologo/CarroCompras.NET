@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="WebApplication1.MasterPages.Base" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+</head>
+<body>
+    <header>
+        <h1>PAGINA MUESTRA</h1>
+    </header>
+    <form id="form1" runat="server">
+        <div class="jumbotron jumbotron-fluid">
+            <table class="table table-borderless">
+                <tr>
+                    <td style="width: 25%" class="text-center">
+                        <div>
+                            <h5>Menu</h5>
+                        </div>
+                        <ul class="list-group text-left">
+                            <li>
+                                <asp:LinkButton ID="LinkButtonInicioSesion" runat="server" PostBackUrl="~/InicioSesion.aspx" type="button" class="btn btn-light btn-lg btn-block">Login</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButtonRegistro" runat="server" PostBackUrl="~/Registro.aspx" type="button" class="btn btn-light btn-lg btn-block">Registro</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </td>
+                    <td style="width: 75%" height="350">
+                        <asp:ContentPlaceHolder ID="CPHContenido" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <footer>
+        <p>Hecha por Josue</p>
+    </footer>
+</body>
+</html>
